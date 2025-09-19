@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Feliz Aniversário</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <main class="stage" role="main" aria-label="Mensagem de feliz aniversário">
+        <!-- SVG rainbow made from multiple arcs; each path will be animated to draw in -->
+        <svg viewBox="0 0 1000 420" aria-hidden="true" class="rainbow">
+            <!-- background soft glow -->
+            <defs>
+                <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="14" result="b" />
+                    <feMerge>
+                        <feMergeNode in="b" />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <!-- arcs (inside-out) -->
+            <path d="M120 400 A380 380 0 0 1 880 400" stroke="#ff5f6d" stroke-width="28" filter="url(#glow)" />
+            <path d="M145 400 A355 355 0 0 1 855 400" stroke="#ff9d6a" stroke-width="26" />
+            <path d="M170 400 A330 330 0 0 1 830 400" stroke="#ffd36a" stroke-width="24" />
+            <path d="M195 400 A305 305 0 0 1 805 400" stroke="#60c657" stroke-width="22" />
+            <path d="M220 400 A280 280 0 0 1 780 400" stroke="#06b6d4" stroke-width="20" />
+            <path d="M245 400 A255 255 0 0 1 755 400" stroke="#7c4dff" stroke-width="18" />
+        </svg>
+
+        <h1 class="message">Feliz Aniversário</h1>
+
+        <div class="audio-player">
+            <button id="playBtn" class="play" aria-label="Play">
+                <!-- Ícone de play padrão -->
+                <svg id="iconPlay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                    fill="white">
+                    <path d="M8 5v14l11-7z" />
+                </svg>
+                <!-- Ícone de pause oculto inicialmente -->
+                <svg id="iconPause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                    fill="white" style="display:none">
+                    <path d="M6 19h4V5H6zm8-14v14h4V5z" />
+                </svg>
+            </button>
+            <input type="range" id="seekBar" value="0" step="1">
+            <span id="time">0:00</span>
+            <audio id="audio" src="musica.mp3"></audio>
+        </div>
+
+
+        <div class="sub">Que seu dia seja colorido e cheio de alegrias ✨</div>
+
+        <div class="confetti" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+    </main>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
