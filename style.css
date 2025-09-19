@@ -21,7 +21,7 @@ body {
     color: #fff;
     display: grid;
     place-items: center;
-    padding: 32px;
+    /* padding: 32px; */
 }
 
 .stage {
@@ -258,4 +258,13 @@ svg {
     color: #fff;
     min-width: 42px;
     text-align: right;
+}
+
+@media (max-width: 600px) {
+    svg.rainbow {
+        width: 100%;
+        max-width: none;
+        margin-top: -20px;
+        /* opcional, sobe um pouco para não cortar */
+    }
 }
