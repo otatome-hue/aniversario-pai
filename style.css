@@ -268,3 +268,62 @@ svg {
         /* opcional, sobe um pouco para não cortar */
     }
 }
+
+#photo-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    /* não atrapalhar clique */
+    overflow: hidden;
+}
+
+#photo-container img.normal {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    border-radius: 12px;
+    opacity: 0;
+    animation: floatPhoto 12s ease-in-out forwards;
+}
+
+#photo-container img {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    border-radius: 12px;
+    opacity: 0;
+    animation: floatPhoto2 3s ease-in-out forwards;
+}
+
+/* animação suave (sobe e desaparece) */
+@keyframes floatPhoto {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(-80px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-150px) scale(0.9);
+    }
+}
+
+@keyframes floatPhoto2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
