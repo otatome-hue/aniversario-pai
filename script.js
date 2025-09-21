@@ -81,7 +81,7 @@ function startPhotos() {
         } else {
             showPhoto(photos[index]);
         }
-    }, 200);
+    }, 6400);
 
     console.log(index);
 }
